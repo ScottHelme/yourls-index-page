@@ -7,7 +7,7 @@ html, body {
 body {
 	font-size: 10pt;
 	font-family: Trebuchet MS,Tahoma,Verdana,sans-serif;
-	background: #ffffff url(http://www.girv.net/img/gradient-top.png) repeat-x top left;
+	background: #ffffff url(http://scotthel.me/images/gradient-top.png) repeat-x top left;
 	color: #222222;
 }
 
@@ -28,16 +28,19 @@ h2 {
 }
 
 a {
+	color: #000000;
 	text-decoration: none;
 }
 a:visited {
+	color: #000000;
 	text-decoration: none;
 }
 a:hover {
-	color: #ff0000;
+	color: #2971ff;
 	text-decoration: underline;
 }
 a:active {
+	color: #2971ff;
 	text-decoration: underline;
 }
 
@@ -66,7 +69,7 @@ ul.subnav li {
 }
 
 table.tablesorter {
-        background: #fefefe url(http://www.girv.net/img-ext/girv-background.png) no-repeat bottom right;
+        background: #fefefe url(http://scotthel.me/images/background.png) no-repeat bottom right;
 }
 
 div#footer {
