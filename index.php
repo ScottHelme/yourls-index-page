@@ -14,7 +14,7 @@ if ($db) {
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <title>girv.in - john girvin's short'n'urlies</title>
+    <title>scotthel.me - short url service</title>
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" type="text/css" href="/index/index.css">
     <link rel="stylesheet" type="text/css" href="/index/tablesorter/style.css">
@@ -22,17 +22,28 @@ if ($db) {
 </head>
 <body>
 
-<h1>girv.in</h1>
-<h2>john girvin's short'n'urlies</h2>
+<h1>scotthel.me</h1>
+<h2>scott helme's short url service</h2>
 
 <div id="header">
 	<ul class="subnav">
-		<li><a rel="me" href="http://www.johngirvin.com">johngirvin.com</a></li>
-		<li><a rel="me" href="http://www.rainmiles.com">rain miles count double</a></li>
-		<li><a rel="me" href="http://www.weedoorsbanging.com">wee doors banging</a></li>
-		<li><a rel="me" href="http://www.girv.net">girv.net</a></li>
+		<li><a rel="me" href="http://www.scotthelme.co.uk">click here to visit my blog</a></li>
 	</ul>
 </div>
+
+
+<?php //output YOURLS statistics
+	if (!empty($urls)){
+		$totalLinks = 0;
+		$totalClicks = 0;
+		
+		foreach ($urls as $url) {
+			$totalLinks += 1;
+			$totalClicks += $url->clicks;
+		}
+		
+		echo "<center>So far I'm tracking " . $totalLinks . " links with " . $totalClicks . " clicks!</center>";
+?>
 
 <?php if (!empty($urls)) : ?>
 <table id="urls" class="tablesorter" align="center">
@@ -93,9 +104,9 @@ if ($db) {
 <?php endif ?>
 
 <div id="footer">
-	girv.in is built with <a target="_blank" href="http://yourls.org">YOURLS</a>, <a target="_blank" href="http://jquery.com">jQuery</a> and <a target="_blank" href="http://tablesorter.com">Tablesorter</a>
+	scotthel.me is built with <a target="_blank" href="http://yourls.org">YOURLS</a>, <a target="_blank" href="http://jquery.com">jQuery</a> and <a target="_blank" href="http://tablesorter.com">Tablesorter</a>
 	<br>
-	&copy; copyright 2009-<?= date('Y') ?> <a target="_blank" rel="me" href="http://www.johngirvin.com">john girvin</a>
+	&copy; copyright <?= date('Y') ?> <a target="_blank" rel="me" href="http://www.scotthelme.co.uk">scott helme</a>
 </div>
 
 <script type="text/javascript" src="/js/jquery-1.4.3.min.js"></script>
