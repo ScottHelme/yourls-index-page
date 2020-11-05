@@ -43,6 +43,7 @@ if ($db) {
 		}
 		
 		echo "<center>So far I'm tracking " . $totalLinks . " links with " . $totalClicks . " clicks!</center>";
+	}
 ?>
 
 <?php if (!empty($urls)) : ?>
@@ -106,7 +107,7 @@ if ($db) {
 <div id="footer">
 	scotthel.me is built with <a target="_blank" href="http://yourls.org">YOURLS</a>, <a target="_blank" href="http://jquery.com">jQuery</a> and <a target="_blank" href="http://tablesorter.com">Tablesorter</a>
 	<br>
-	&copy; copyright <?= date('Y') ?> <a target="_blank" rel="me" href="http://www.scotthelme.co.uk">scott helme</a>
+	&copy; copyright <?php date('Y') ?> <a target="_blank" rel="me" href="http://www.scotthelme.co.uk">scott helme</a>
 </div>
 
 <script type="text/javascript" src="/js/jquery-1.4.3.min.js"></script>
